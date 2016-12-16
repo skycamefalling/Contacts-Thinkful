@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "32121E37BA21728539AC162A4EA36E4FFF88204E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "32121E37BA21728539AC162A4EA36E4FFF88204E" : 9223372036854775807,
+    "10F9352F9C5752B9F239631E3F00718ECEA5DB40" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "33C48735-1CFA-41F1-B0BA-34036968481A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "32121E37BA21728539AC162A4EA36E4FFF88204E" : "Contacts\/",
+    "10F9352F9C5752B9F239631E3F00718ECEA5DB40" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Contacts",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Contacts\/Contacts.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Thinkful-Ed\/Llamas-in-Pajamas-Assignment.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "10F9352F9C5752B9F239631E3F00718ECEA5DB40"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/skycamefalling\/Contacts-Thinkful.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "32121E37BA21728539AC162A4EA36E4FFF88204E"
+    }
+  ]
+}

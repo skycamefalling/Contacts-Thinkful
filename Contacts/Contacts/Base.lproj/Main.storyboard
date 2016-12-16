@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="16a-ne-seC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ll4-GR-n85">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,6 +34,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="DCB-uX-Ujo" kind="show" identifier="showDetail" id="Pid-aM-Cu4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -41,10 +44,76 @@
                             <outlet property="delegate" destination="16a-ne-seC" id="fs1-sm-PN4"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="YQ3-t8-Hab"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uY1-1D-awi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250" y="174"/>
+            <point key="canvasLocation" x="1188" y="173.16341829085459"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="zeB-ci-AqZ">
+            <objects>
+                <viewController id="DCB-uX-Ujo" customClass="DetailViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fbk-wu-Wrz"/>
+                        <viewControllerLayoutGuide type="bottom" id="M93-lj-za5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HsN-ic-DW4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydQ-ow-mdr">
+                                <rect key="frame" x="16" y="231" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efj-by-kpa">
+                                <rect key="frame" x="16" y="274" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-7-user-add" translatesAutoresizingMaskIntoConstraints="NO" id="MH8-LG-A4m">
+                                <rect key="frame" x="127" y="72" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MUk-ac-44M"/>
+                    <connections>
+                        <outlet property="contactImage" destination="MH8-LG-A4m" id="tX9-Jt-6Vp"/>
+                        <outlet property="nameLabel" destination="ydQ-ow-mdr" id="sRl-Et-qIP"/>
+                        <outlet property="phoneLabel" destination="efj-by-kpa" id="QeV-d1-kmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ML-Bs-IBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2290" y="173"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cPK-pc-ICQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ll4-GR-n85" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="quU-hB-Wl1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="16a-ne-seC" kind="relationship" relationship="rootViewController" id="AMe-nS-xMv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBq-tZ-Yrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248.80000000000001" y="173.16341829085459"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="glyphicons-7-user-add" width="28" height="24"/>
+    </resources>
 </document>
