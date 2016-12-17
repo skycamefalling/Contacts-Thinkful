@@ -13,6 +13,12 @@ class ContactsTableViewController: UITableViewController {
     
     var contacts: [Contact] = []
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let patrick = Contact.init(name: "Patrick Donahue", phoneNum: "5554445566")
@@ -26,8 +32,8 @@ class ContactsTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(ContactsTableViewController.addContact))
+        navigationItem.rightBarButtonItem = addButton
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,6 +120,16 @@ class ContactsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: Add COntact
+    func addContact()
+    {
+        let newContact = Contact(name: "New Contact")
+        self.contacts.append(newContact)
+        let newIndexPath = IndexPath(row: self.contacts.count - 1, section: 0)
+        self.tableView.insertRows(at: [newIndexPath], with: .automatic)
+        
+    }
     
     //MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
